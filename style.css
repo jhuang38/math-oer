@@ -68,14 +68,13 @@ button {
 
 /* style accordian buttons inside other main panels */
 .accordian ~ .panel {
-    height: 0px;
+    max-height: 0px;
 }
 
 .accordian.active + .panel {
     /* set max height something to the size the box will never get to */
     max-height: 500px;
-    transition: max-height .1s ease-in;
-    height: 100%;
+    transition: max-height .4s ease-in-out;
 }
 
 /* add icons to content */
