@@ -47,23 +47,27 @@ button {
     border-radius: 5px;
 }
 
-.active, .accordian:hover {
-    background-color: #ccc;
-}
-
-/* style buttons inside other main panels */
-.accordian.nested {
-    padding: 12px;
-}
-
 /* style accordian panel, hidden by default */
 .panel {
     padding: 0 18px;
     background-color: white;
     overflow: hidden;
     /* for animated according dropdown */
-    max-height: 0;
-    transition: max-height 0.1s ease-out;
+    /* max-height: 0; */
+    transition: height 0.2s linear 0s;
+}
+
+.active, .accordian:hover {
+    background-color: #ccc;
+}
+
+/* style accordian buttons inside other main panels */
+.accordian ~ .panel {
+    height: 0px;
+}
+
+.accordian.active + .panel {
+    height: 100%;
 }
 
 /* add icons to content */
