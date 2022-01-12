@@ -53,8 +53,7 @@ button {
     background-color: white;
     overflow: hidden;
     /* for animated according dropdown */
-    /* max-height: 0; */
-    transition: height 0.2s linear 0s;
+    max-height: 0;
 }
 
 .active, .accordian:hover {
@@ -67,6 +66,9 @@ button {
 }
 
 .accordian.active + .panel {
+    /* set max height something to the size the box will never get to */
+    max-height: 500px;
+    transition: max-height .1s ease-in;
     height: 100%;
 }
 
