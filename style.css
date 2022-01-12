@@ -1,0 +1,19 @@
+/* base styling */
+@font-face {
+    font-family: "Roboto"; 
+    src: url(resources/fonts/Roboto-Regular.ttf);
+    font-style: normal;
+    font-weight: 100px;
+}
+
+body {
+    font-family: Roboto;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 199, 74);
+}
