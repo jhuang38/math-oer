@@ -9,6 +9,10 @@
 body {
     font-family: Roboto;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 .header {
@@ -16,4 +20,60 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(242, 199, 74);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    gap: 8px;
+}
+
+button {
+    font-family: "Roboto";
+    width: 100%;
+    font-size: 24px;
+}
+
+/* style buttons for opening/closing panel */
+.accordian {
+    background-color: #eee;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.active, .accordian:hover {
+    background-color: #ccc;
+}
+
+/* style buttons inside other main panels */
+.accordian.nested {
+    padding: 12px;
+}
+
+/* style accordian panel, hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    /* for animated according dropdown */
+    max-height: 0;
+    transition: max-height 0.1s ease-out;
+}
+
+/* add icons to content */
+.accordian:after {
+    content: '\02795'; /* unicode for + */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* unicode for - */
 }
