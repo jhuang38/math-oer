@@ -1,0 +1,146 @@
+/* global properties */
+@font-face {
+  font-family: "Roboto";
+  src: url(../resources/fonts/Roboto-Regular.ttf);
+  font-style: normal;
+  font-weight: 100px;
+}
+
+/* styling for elements in body */
+body {
+  font-family: Roboto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+body .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2c74a;
+  padding: 8px;
+  gap: 16px;
+  width: 100%;
+}
+
+body .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: 'Roboto';
+  width: 100%;
+  font-size: 24px;
+}
+
+.accordian {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 18px;
+  text-align: left;
+  border: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.active, .accordian:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  /* for animating dropdown effect */
+  max-height: 0;
+}
+
+/* state for when accordians are active */
+.accordian ~ .panel {
+  max-height: 0px;
+  -webkit-transition: max-height .15s ease-out;
+  transition: max-height .15s ease-out;
+}
+
+.accordian.active + .panel {
+  max-height: 100vh;
+  -webkit-transition: max-height .3s ease-out;
+  transition: max-height .3s ease-out;
+}
+
+/* icons for content */
+.accordian:after {
+  /* unicode for + */
+  content: '\02795';
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  /* unicode for - */
+  content: "\2796";
+}
+
+/* subsections are flex elements */
+.subsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+.acontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=style.css.map */
