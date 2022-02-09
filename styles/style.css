@@ -96,6 +96,10 @@ button {
   max-height: 0;
 }
 
+.panel.inside {
+  background-color: #eee;
+}
+
 /* state for when accordians are active */
 .accordian ~ .panel {
   max-height: 0px;
